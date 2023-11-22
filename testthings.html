@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Show Hidden Sections</title>
+  <link rel="stylesheet" href="test_things.css">
+</head>
+<body>
+
+  <button class="showButton" data-target="section1"><div class="buttonimage"><img src= "chihiro2.png" width="200" alt="button" class="front_button"><img src="chihiro.jpg" width="200" alt="button"> 
+		  </div>
+	</button>
+
+  <button class="showButton" data-target="section2"><div class="buttonimage"><img src= "haku2.png" width="200" alt="button" class="front_button"><img src="haku.jpg" width="200" alt="button"> 
+		  </div></button>
+
+  <button class="showButton" data-target="section3">Show Section 3</button>
+			   
+	<div class="header" id="about-header"><h1>Character Profiles</h1></div>
+
+
+  <div id="section1" class="hiddenSection">
+    <span>
+	<img src="chihirofullbody.jpg" class="character-full" id="chihiro-full">
+	<h2>Chihiro</h2>
+	<p>Chihiro is the main character of spirited away, known to have a valiant</p>
+	</span>
+  </div>
+
+  <div id="section2" class="hiddenSection">
+   <span>
+	<img src="dragon.jpg" class="character-full" id="haku-full">
+	<h2>Haku</h2>
+	<p>CRONCH CRONCH CRONCH</p>
+	</span>
+  </div>
+
+  <div id="section3" class="hiddenSection">
+    <p>This is Section 3!</p>
+  </div>
+
+  <script>document.addEventListener('DOMContentLoaded', function() {
+  var buttons = document.querySelectorAll('.showButton');
+
+  buttons.forEach(function(button) {
+    button.addEventListener('click', function() {
+      var targetId = button.getAttribute('data-target');
+      var targetSection = document.getElementById(targetId);
+
+      if (targetSection.style.display === 'none') {
+        // Show the clicked section
+        targetSection.style.display = 'block';
+      } else {
+        // Hide the clicked section
+        targetSection.style.display = 'none';
+      }
+
+      // Hide other sections
+      buttons.forEach(function(otherButton) {
+        if (otherButton !== button) {
+          var otherTargetId = otherButton.getAttribute('data-target');
+          var otherTargetSection = document.getElementById(otherTargetId);
+          otherTargetSection.style.display = 'none';
+        }
+      });
+    });
+  });
+});</script>
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>¡Characters</title>
+<link href="character page.css" rel="stylesheet" type="text/css">
+</head>
+<main id="main-doc">
+	  <!-- Logo -->
+  <div id="logoimage">
+    <img src="logo-grey.png" id="logo" class="center" alt="logo">
+  </div>
+	  <!-- Navigation -->
+  <nav id="nav">
+	<a href="landing page.html">Home</a>
+    <a href="character page.html">Characters</a>
+    <a href="Behind-the-scenes.html">Behind the Scenes</a>
+	<a href="Fan Community.html">Fan Community</a>
+  </nav>		
+	<!-- Character Buttons -->
+	<div class="characters">
+    <!-- Chihiro Button -->
+	<button class="showButton" data-target="section1"><div class="buttonimage"><img src= "chihiro2.png" width="200" alt="button" class="front_button"><img src="chihiro.jpg" width="200" alt="button"> 
+		  </div>
+	</button>
+		
+	 <button class="showButton" data-target="section2"><div class="buttonimage"><img src= "haku2.png" width="200" alt="button" class="front_button"><img src="haku.jpg" width="200" alt="button"> 
+		  </div></button>
+		
+	<button class="showButton" data-target="section3"><div class="buttonimage"><img src= "no face 2.png" width="200" alt="button" class="front_button"><img src="no face.jpg" width="200" alt="button"> 
+		  </div></button>
+		
+	<button class="showButton" data-target="section4"><div class="buttonimage"><img src= "yubaba2.png" width="200" alt="button" class="front_button"><img src="yubaba.jpg" width="200" alt="button"> 
+		  </div></button>
+		
+	<!-- Character Profiles -->
+		    <div class="header" id="about-header"><h1>Character Profiles</h1></div>
+
+	<!-- Chihiro Profile -->
+	<div id="section1" class="hiddenSection">
+<div class="card">
+  <img src="chihirofullbody.jpg" alt="Chihiro Profile Picture" style="width:100%">
+  <h1>CHIHIRO</h1>
+  <p class="title">.....Main Character.....</p>
+  <p>Chihiro (荻野 千尋 , Ogino Chihiro), referred throughout most of the film by Sen (千 lit. "one-thousand"), is the ten-year-old core protagonist of the Japanese animated film Spirited Away
+  </p>
+  <p><b>Species :</b>Human</p>
+  <p><b>Age :</b>10</p>
+  <p><b>Gender :</b>Female</p>
+  <p><b>Voice Actor :</b>Rumi Hiiragi (Japan), Daveigh Chase (Disney)</p>
+  <a href="https://ghibli.fandom.com/wiki/Chihiro_Ogino"><button class="wikibutton">Wiki</button></a>
+</div>
+	</div>
+	<!-- Haku Profile -->
+		<div id="section2" class="hiddenSection">
+  <div class="card">
+  <img src="haku.webp" alt="Haku Profile Picture" class="character-full">
+  <h1>HAKU</h1>
+  <p class="title">.....Co-protagonist.....</p>
+  <p>Nigihayami Kohakunushi (饒速水小白主, Nigihayami Kohakunushi, lit. "Master of the Swift Amber River"), referred throughout most of the film by the name Yubaba gives him: Haku (ハク, haku), is the deuteragonist in the 2001 animated film Spirited Away.
+  </p>
+  <p><b>Species : </b>River God/Dragon/Snake</p>
+  <p><b>Age :</b>12</p>
+  <p><b>Gender :</b>Male</p>
+  <p><b>Voice Actor :</b>Miyu Irino (Japan),<br>Jason Marsden (Disney)</p>
+  <a href="https://ghibli.fandom.com/wiki/Haku">
+  <button class="wikibutton">Wiki</button>
+  </a>
+  </div>
+		</div>
+  <!-- No Face Profile -->
+		<div id="section3" class="hiddenSection">
+  <div class="card">
+  <img src="no face.webp" alt="No Face Profile Picture" class="character-full">
+  <h1>NO FACE</h1>
+  <p class="title">.....Supporting Character.....</p>
+  <p>No-Face (顔無し, Kaonashi, lit. "Faceless") is a character in Spirited Away. He is shown to be capable of reacting to emotions and ingesting other individuals in order to gain their personality and physical traits.
+  </p>
+  <p><b>Species : </b>Spirit</p>
+  <p><b>Age :</b>???</p>
+  <p><b>Gender :</b>???</p>
+  <p><b>Voice Actor :</b>Akio Nakamura (Japan),<br>Bob Bergen (Disney)</p>
+  <a href="https://ghibli.fandom.com/wiki/No-Face">
+  <button class="wikibutton">Wiki</button>
+  </a>
+  </div>
+			</div>
+		
+  <!-- YubabaProfile -->
+		<div id="section4" class="hiddenSection">
+  <div class="card">
+  <img src="yubabafull2.jpg" alt="Yubaba Profile Picture" class="character-full">
+  <h1>YUBABA</h1>
+  <p class="title">.....Main Antagonist.....</p>
+  <p>Yubaba (湯婆婆, Yubāba), or Granny by Chihiro, is the proprietor of the Bathhouse and the main antagonist of the Japanese animated film Spirited Away. She is the identical younger twin sister of Zeniba and the mother of Boh. She has a harpy servant called Yu-Bird and has an apprentice by the name of Haku, and is the employer of maybe hundreds of other bathhouse workers.
+  </p>
+  <p><b>Species : </b>Witch</p>
+  <p><b>Age :</b>???</p>
+  <p><b>Gender :</b>Female</p>
+  <p><b>Voice Actor :</b>Mari Natsuki (Japan),<br>Suzanne Pleshette (Disney)</p>
+  <a href="https://ghibli.fandom.com/wiki/Yubaba">
+  <button class="wikibutton">Wiki</button>
+  </a>
+  </div>
+			</div>
+		
+	<!-- Character Button script -->
+  <script>document.addEventListener('DOMContentLoaded', function() {
+  var buttons = document.querySelectorAll('.showButton');
+
+  buttons.forEach(function(button) {
+    button.addEventListener('click', function() {
+      var targetId = button.getAttribute('data-target');
+      var targetSection = document.getElementById(targetId);
+
+      if (targetSection.style.display === 'none') {
+        // Show the clicked section
+        targetSection.style.display = 'block';
+      } else {
+        // Hide the clicked section
+        targetSection.style.display = 'none';
+      }
+
+      // Hide other sections
+      buttons.forEach(function(otherButton) {
+        if (otherButton !== button) {
+          var otherTargetId = otherButton.getAttribute('data-target');
+          var otherTargetSection = document.getElementById(otherTargetId);
+          otherTargetSection.style.display = 'none';
+        }
+      });
+    });
+  });
+});</script>
+	
+	</div>
+</main>
+</html>
+

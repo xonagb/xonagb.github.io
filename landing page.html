@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Travel Blog</title>
+<link href= "landing page.css"  rel="stylesheet" type="text/css">
+</head>
+<main id="main-doc">
+		  <!-- Logo -->
+  <div id="logoimage">
+    <img src="logo-grey.png" id="logo" class="center" alt="logo">
+  </div>
+	  <!-- Navigation -->
+  <nav id="nav">
+	<a href="landing page.html">Home</a>
+    <a href= "character page.html">Characters</a>
+    <a href="Behind-the-scenes.html">Behind the Scenes</a>
+	<a href="Fan Community.html">Fan Community</a>
+  </nav>
+   <!-- Slideshow -->
+<div class="slideshow-container">
+  <div class="mySlides fade">
+    <img src="the garden 2.jpg" style="width:100%">
+  </div>
+  <div class="mySlides fade">
+    <img src="servants chambers.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides fade">
+    <img src= "frog statue.jpg" style="width:100%" class="current">
+  </div>
+</div>
+<br>
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+
+<script>
+let slideIndex = 0;
+showSlides();
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 3600); // Change image every 3.6 seconds
+}
+</script>
+
+	<!-- About -->
+     <div class="header" id="about-header"><h1>About the Movie</h1></div>
+	 <div class="main-container" id="about-container">
+        <div class="image"><img src="profile picture.jpg" alt="image of chihiro" id="chihiro"></div>
+		  <span id="about-info"><h3>Logline:</h3>
+			  <p>"Spirited Away," a captivating Japanese animated fantasy film directed by the renowned Hayao Miyazaki and produced by Studio Ghibli, unfolds a mesmerizing tale of courage, self-discovery, and the enchanting mysteries of a fantastical world.</p> 
+			  <p>Directed by: Hayaoi Miyazaki   ///   Produced by: Studio Ghibli</p>
+			  <p>Date of Release: 2001</p>
+		  </span>
+	</div>
+</main>
+</html>
+

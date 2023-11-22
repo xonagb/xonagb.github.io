@@ -1,0 +1,68 @@
+@charset "utf-8";
+/* CSS Document */
+body{
+	background-image:url("backgrounds.jpg");
+   	background-repeat:no-repeat;
+	background-size:cover;
+	background-attachment: fixed;
+	background-position: center center;
+	background-color:black;
+	height:auto;
+    max-width: 100%;
+}
+
+* {
+	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", "serif";
+}
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.whole{
+	justify-content:center;
+	padding-top: auto;
+	padding-left: auto;
+	padding-right:auto;
+	padding-bottom:auto;
+    height: auto;
+	width:auto;
+    font-style: italic;
+}
+
+#logo{
+	padding-top:30%;
+	align-content: center; 
+}
+
+
+#text{
+	color:aliceblue;
+	font-size: 150%;
+	width:100%;
+    height:auto; 
+	padding-left:10%
+
+}
+button{
+	width:100%;
+	height:auto;
+	background: none; 
+	overflow:hidden;
+	border:none;
+	cursor:pointer;
+	padding-right:20%;
+}
+
+.buttonimage{
+        display: inline-block;
+}
+.buttonimage .front_button{
+	    display: none;
+        position: absolute;
+}
+ .buttonimage:hover .front_button {
+        display: inline;
+    }
